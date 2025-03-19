@@ -12,12 +12,10 @@ namespace Company.demo.BLL.Repositories
 {
     public class DepartmentRepository : IDepartmentRepository
     {
-        //
-
         private readonly CompanyDpContext _dpContext;// NULL
-        public DepartmentRepository()
+        public DepartmentRepository(CompanyDpContext companyDpContext)
         {
-            _dpContext = new CompanyDpContext();
+            _dpContext = companyDpContext;
         }
         public IEnumerable<Department> GetAll()
         {
