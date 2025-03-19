@@ -11,16 +11,16 @@ namespace Company.demo.DAL.Data.Contexts
 {
     public class CompanyDpContext:DbContext
     {
-        public CompanyDpContext() : base(){ }
+        public CompanyDpContext(DbContextOptions<CompanyDpContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server= Shimaa123; Database = CompanyG04; Trusted_Connection= True ;TrustServerCertificate=True");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server= Shimaa123; Database = CompanyG04; Trusted_Connection= True ;TrustServerCertificate=True");
+        //}
         public DbSet<Department> Departments { get; set; }   
     }
 }
