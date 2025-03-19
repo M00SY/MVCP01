@@ -1,3 +1,8 @@
+using Company.demo.BLL.Repositories;
+using Company.demo.DAL.Data.Contexts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 namespace company.PL
 {
     public class Program
@@ -8,6 +13,8 @@ namespace company.PL
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<DepartmentRepository>();// Allow DI for DepartmentRepository
+            builder.Services.AddDbContext<CompanyDpContext>(options => options.UseSqlServer("Server= AMA; Database = CompanyC43; Trusted_Connection= True ;TrustServerCertificate=True"));// Allow DI for CompanyDpContext
 
             var app = builder.Build();
 
