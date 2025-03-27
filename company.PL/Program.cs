@@ -14,7 +14,7 @@ namespace company.PL
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<DepartmentRepository>();// Allow DI for DepartmentRepository
-            builder.Services.AddDbContext<CompanyDpContext>(options => options.UseSqlServer("Server= AMA; Database = CompanyC43; Trusted_Connection= True ;TrustServerCertificate=True"));// Allow DI for CompanyDpContext
+            builder.Services.AddDbContext<CompanyDpContext>(options => options.UseSqlServer("Server= Shimaa123; Database = CompanyG04; Trusted_Connection= True ;TrustServerCertificate=True"));// Allow DI for CompanyDpContext
 
             var app = builder.Build();
 
