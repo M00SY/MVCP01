@@ -9,6 +9,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.demo.BLL", "Company.demo.BLL\Company.demo.BLL.csproj", "{48C5DE90-8144-4161-8C0C-18045ED4FD79}"
 EndProject
 Global
+
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
